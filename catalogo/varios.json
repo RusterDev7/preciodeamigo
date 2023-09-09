@@ -4,41 +4,41 @@
       "id": 1,
       "title": "40x40x60-1",
       "descripcion": "",
-      "thumbnailUrl": "img/varios/40x40x60-1.jpg"
+      "thumbnailUrl": "img/svg/varios/40x40x60-1.svg"
     },
     {
       "precio": 0.99,
       "id": 2,
       "title": "100x60x100-2",
       "descripcion": "",
-      "thumbnailUrl": "img/varios/100x60x100-2.jpg"
+      "thumbnailUrl": "img/svg/varios/100x60x100-2.svg"
     },
     {
       "precio": 0.99,
       "id": 3,
       "title": "30x50x70-3",
       "descripcion": "",
-      "thumbnailUrl": "img/varios/30x50x70-3.jpg"
+      "thumbnailUrl": "img/svg/varios/30x50x70-3.svg"
     },
     {
       "precio": 0.99,
       "id": 4,
       "title": "30x50x70-4",
       "descripcion": "",
-      "thumbnailUrl": "img/varios/30x50x70-4.jpg"
+      "thumbnailUrl": "img/svg/varios/30x50x70-4.svg"
     },
     {
       "precio": 0.99,
       "id": 5,
       "title": "100x60x100-5",
       "descripcion": "",
-      "thumbnailUrl": "img/varios/100x60x100-5.png"
+      "thumbnailUrl": "img/svg/varios/100x60x100-5.svg"
     },
     {
       "precio": 0.99,
       "id": 6,
       "title": "100x60x100-6",
       "descripcion": "",
-      "thumbnailUrl": "img/varios/100x60x100-6.jpeg"
+      "thumbnailUrl": "img/svg/varios/100x60x100-6.svg"
     }
   ]

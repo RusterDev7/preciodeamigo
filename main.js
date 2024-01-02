@@ -12,7 +12,7 @@ function main() {
         divBanner2.id = "myDiv2";
         divBanner2.innerHTML=`
         <br>
-        <p style="font-size: 20px;">Fabricación y Venta Telefónica Lunes a viernes 9 a 18 Tel: 11-2204-9427 </p>
+        <p style="font-size: 18px;">Bs. As. Argentina Fabricación y Venta Telefónica Lunes a viernes 9 a 18 Tel: 11-2204-9427 </p>
         `
    /*     divBanner2.innerHTML = `
     <br>

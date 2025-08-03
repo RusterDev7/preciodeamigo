@@ -1,0 +1,179 @@
+/* Tu CSS existente... */
+
+/* --- Tus estilos actuales para el botón de hamburguesa y sus líneas --- */
+
+
+
+
+
+.navbar-burger {
+    display: none; /* Asegura que no se muestre por defecto en pantallas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    z-index: 10;
+    margin-left: auto;
+    display: flex; /* Este display:flex es importante para que las líneas se centren */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-burger span:last-child {
+    margin-bottom: 0;
+}
+
+/* --- MEDIA QUERIES: Control de visibilidad del botón y el menú --- */
+
+/* En pantallas GRANDES (min-width: 769px): */
+@media screen and (min-width: 769px) {
+    .navbar-burger {
+        display: none; /* Oculta el botón de hamburguesa */
+    }
+    .navbar-menu {
+        display: flex !important; /* Muestra el menú completo en pantallas grandes */
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        flex-direction: row; /* Ítems en fila */
+        text-align: left; /* Asegura la alineación a la izquierda si el padre lo centra */
+    }
+    .navbar-start {
+        display: flex; /* Para que los ítems estén en línea en escritorio */
+        justify-content: flex-start; /* Alinea los ítems a la izquierda */
+        width: 100%; /* Asegura que ocupe el ancho para la alineación */
+    }
+    .navbar-start li { /* Asegura que los li no tengan puntos en escritorio */
+        list-style: none;
+    }
+    .navbar-start .navbar-item { /* Estilos para el enlace en escritorio */
+        margin-right: 15px; /* Espacio entre ítems en escritorio */
+        padding: 8px 10px; /* Vuelve a tu padding original si es necesario */
+    }
+    .navbar-start .navbar-item:last-child {
+        margin-right: 0;
+    }
+}
+
+/* En pantallas PEQUEÑAS (max-width: 768px): */
+@media screen and (max-width: 768px) {
+    .navbar-burger {
+        display: flex; /* Muestra el botón de hamburguesa */
+    }
+    .navbar-menu {
+        display: none; /* Oculta el menú por defecto */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        flex-direction: column; /* Apila los ítems verticalmente */
+        text-align: left; /* <--- IMPORTANTE: Alinea el contenido del menú a la IZQUIERDA */
+    }
+
+    /* Cuando el menú tiene la clase 'is-active', se muestra */
+    .navbar-menu.is-active {
+        display: flex;
+    }
+
+    /* Estilos para los <li> dentro del menú desplegado */
+    .navbar-start li {
+        list-style: none; /* <--- QUITA EL PUNTO DE LOS LI EN MÓVIL */
+        padding: 0; /* Asegura que no haya padding extra que centre */
+        margin: 0; /* Asegura que no haya margen extra que centre */
+    }
+
+    /* Estilos para el enlace dentro del <li> en el menú desplegado */
+    .navbar-start .navbar-item {
+        width: 100%; /* El enlace ocupa todo el ancho del <li> */
+        padding: 0.75rem 1rem; /* <--- ESPACIADO Y ALINEACIÓN: padding vertical y horizontal (más a la izquierda) */
+        border-bottom: 1px solid #eee;
+        display: block; /* Asegura que el enlace se comporte como un bloque para ocupar el 100% de ancho */
+        text-align: left; /* <--- ALINEA EL TEXTO DEL ENLACE A LA IZQUIERDA */
+    }
+    .navbar-start .navbar-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* --- Tus estilos para el Navbar base y navbar-brand, navbar-item globales --- */
+.navbar {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Este .navbar-item es el estilo general para los enlaces, sin estar dentro de un li */
+.navbar-item {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    /* Los padding de media query sobrescribirán este en móvil si son más específicos */
+    /* padding: 8px 10px; */
+}
+
+.navbar-item:hover {
+    color: #007bff;
+}
+
+/* En tu archivo CSS */
+.min-height-content {
+    min-height: 390px; /* Esto asegura que el div tenga al menos 800px de alto */
+}
+
+/* Opcional: Si el contenido es más alto que la pantalla, es buena idea que el main o el contenedor principal también sea flexible */
+/*.flex-grow-1 { 
+    flex-grow: 1;
+}*/
+/* Asegurate de que el <main> en App.rs tenga esta clase */
+
+/* Tu CSS existente... */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    /* Quita cualquier `justify-content` que pueda estar aquí si lo hay,
+       ya que `margin-right: auto` lo manejará */
+}
+
+/* Modifica esta regla o añade una nueva si es necesario */
+.navbar-brand .navbar-item { /* Selecciona específicamente el navbar-item dentro de navbar-brand */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 20px;
+
+    /* --- ¡AÑADE O MODIFICA ESTA LÍNEA! --- */
+    margin-right: auto; /* Empuja los elementos siguientes a la derecha */
+}
+
+.navbar-item:hover {
+    color: #007bff;
+}
+
+/* El resto de tu CSS (media queries, etc.) permanece igual */
